@@ -1,5 +1,5 @@
 # thailus
-thailus is a ai that can make our life easy
+lion is a ai that can make our life easy
 features to encoperate
 1)facial detection
 2)voice command running
