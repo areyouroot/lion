@@ -1,8 +1,6 @@
-import speech_recognition as sr
-mic=sr.Recognizer()
-print ("cool")
-with sr.Microphone() as call:
-    print("program started")
-    lion=mic.listen(call)
-    google=mic.recognize_google(lion)
-    print(google)
+# import required module
+from playsound import playsound
+
+# for playing note.wav file
+playsound('./sound.mp3')
+print('playing sound using playsound')
