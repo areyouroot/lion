@@ -1,4 +1,7 @@
 # thailus
+
+it should be able to recoganiuse the person and allow him in and tell wheather he/she is late and howmany times it should access database
+
 lion is a ai that can make our life easy
 features to encoperate
 1)facial detection
