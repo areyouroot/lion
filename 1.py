@@ -9,14 +9,13 @@ while True:
         lion=mic.listen(call)
         google=mic.recognize_google(lion)
 
-        if(google=="hey lion"):
+        if 'lion' in google:
             
             with sr.Microphone() as source:
                 print("listening.........\n\n")
                 cmd=mic.listen(source)
 
-                #google
-                print(" google view ")
+                #google 
                 google=mic.recognize_google(cmd)
                 print(google)
 

@@ -11,27 +11,28 @@ voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
 
 
+
 def talk(text):
     engine.say(text)
     engine.runAndWait()
 
 
 def take_command():
-    try:
-        with sr.Microphone() as source:
-            print('listening...')
-            voice = listener.listen(source)
-            command = listener.recognize_google(voice)
-            command = command.lower()
-            if 'lion' in command:
-                command = command.replace('lion', '')
-                print(command)
-    except:
-        pass
+    
+    with sr.Microphone() as source:
+        print('listening...')
+        voice = listener.listen(source)
+        command = listener.recognize_google(voice)
+        command = command.lower()
+        if 'lion' in command:
+            command = command.replace('lion', '')
+            print(command)
+
     return command
 
 
 def run_lion():
+    talk("")
     command = take_command()
     print(command)
     if 'play' in command:
@@ -42,7 +43,7 @@ def run_lion():
         time = datetime.datetime.now().strftime('%I:%M %p')
         talk('Current time is ' + time)
     elif 'who is' in command:
-        person = command.replace('who the heck is', '')
+        person = command.replace('who is', '')
         info = wikipedia.summary(person, 1)
         print(info)
         talk(info)
@@ -52,5 +53,7 @@ def run_lion():
         talk('Please say the command again.')
 
 
+talk("hello my name is lion and how can i help you")
 while True:
     run_lion()
+    talk("anything else")
