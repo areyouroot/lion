@@ -21,3 +21,18 @@ features to encoperate
 15)keybord login to retrain the face and voice
 16)train by voice
 17)get result on google for your commands and then process it in two ways 1]how to say 2]direct search results
+
+
+gtproject
+
+the product should be able to recognize face and authenticate person
+which face was admin face it should enable authentication by password also change the internal content and settings and database
+The product should be able two give attendance whoever it recognizes this
+Product should check the attendance stored in the database
+Product should fill the person if he or she is late don't be late again
+Should get commands and search it in Google like an artificial assistant
+The assistant should be called by a particular name called lion 
+there should be two types of mode one is automatic mode which automatically recognize the person and put certain times 
+another one is call mode which means you should call it hello lion to record your attendance
+add a traing for lion
+add a logic training for lion
