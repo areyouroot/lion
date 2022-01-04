@@ -1,0 +1,36 @@
+{% load static %}
+<! DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+            <title>lion - {{ title }}</title>
+        {% else %}
+        <title>lion</title>
+        {% endif %}
+        <style>
+            .heading{
+                border: 3px solid rgb(119, 169, 192);
+                border-radius: 20px;
+                padding: 12px;
+                margin: 3%;
+                margin-left: 20%;
+                margin-right: 20%;
+                text-align: center;
+                color: azure;
+
+            }
+            body{
+                background-image: linear-gradient(rgb(1, 25, 31), rgb(40, 52, 61),rgb(23, 34, 39));
+            }
+        </style>
+    </head>
+    <body>
+
+        {% block content %}
+
+
+
+        {% endblock %}
+
+    </body>
+    </html>

@@ -1,0 +1,62 @@
+{% extends "lion/base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <style>
+    .anime {
+        font-size: 400%;
+        margin-top: 12%;
+        border: 0px ;
+        color: rgb(185, 239, 255);
+        text-align: center;
+        margin-left: 30%;
+        margin-right: 30%;
+/*        opacity: 1;
+        -webkit-transition: opacity 0.3s ease-in-out;
+        -moz-transition: opacity 0.3s ease-in-out;
+        -o-transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;*/
+        animation: face_scan 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes face_scan {
+        0%{
+            opacity:1;
+        }        
+        100%{
+            opacity: 0;
+        }
+    }
+
+    html:hover .anime{
+        opacity: 0;
+    }
+    </style>
+
+    <h1 class="heading">welcome to lion</h1>
+    <div id="wait" class="anime">lets scan ur face</div>
+<!--
+https://www.youtube.com/watch?v=-lGpL6_7H3M
+https://www.youtube.com/watch?v=1PkNiYlkkjo&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=4
+-->
+<!--<script>
+    const d = new Date();
+    let seconds = d.getSeconds();
+    while (true) {
+
+        if (seconds%5==0){
+            document.getElementById('wait').classList.toggle('fade');
+        }
+        else{
+            document.getElementById('wait').classList.toggle('anime');
+        }
+    
+    }
+
+
+
+</script> -->
+{% endblock content %}
+
