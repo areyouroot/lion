@@ -3,9 +3,9 @@ import numpy as np
 import face_recognition as fc
 from numpy.lib.index_tricks import ogrid
 
-imgget = fc.load_image_file('./elone.jpg')
+imgget = fc.load_image_file('./images/elone.jpg')
 imgget = cv2.cvtColor(imgget,cv2.COLOR_BGR2RGB)
-imgtest = fc.load_image_file('./elonetest1.jpg')
+imgtest = fc.load_image_file('./images/elonetest1.jpg')
 imgtest = cv2.cvtColor(imgtest,cv2.COLOR_BGR2RGB)
 
 faceloc = fc.face_locations(imgget)[0] #prints the face location usefull to draw rectangle in image
