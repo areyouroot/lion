@@ -5,7 +5,7 @@ import os
 import sqlite3
 
 def first():
-    sqlite3.connect('face.db')
+    conn = sqlite3.connect('face.db')
     c = conn.cursor()
     c.execute("""
     CREATE TABLE members (id INTEGER PRIMARY KEY,pic BLOB)
