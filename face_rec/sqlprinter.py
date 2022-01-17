@@ -5,7 +5,7 @@ import sqlite3
 from tkinter import PhotoImage
 
 
-id = int(input("enter the employee id: "))
+
 con = sqlite3.connect('face.db')
 c = con.cursor()
 
@@ -13,14 +13,7 @@ c = con.cursor()
 
 #get id and photo to insert
 
-with open('./test/elone.jpg','rb') as photo: #reads image and stores into a variable
-    img = photo.read()
-    
-c.execute("""
-INSERT INTO face (id, pic) VALUES (?,?)
-""",(id, img))
-
-c.execute("SELECT * FROM face")
+c.execute("SELECT id FROM face")
 print(c.fetchall())
 con.commit()
 con.close()
