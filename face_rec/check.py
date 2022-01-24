@@ -1,6 +1,7 @@
 # imports
 
 import sqlite3
+from sre_constants import SUCCESS
 from tabnanny import check
 import cv2
 import numpy as np
@@ -21,5 +22,19 @@ with open("check.jpg","wb") as file:
 cwd = os.getcwd()
 img = cv2.imread(f'{cwd}/check.jpg')
 img= cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
-encode = fc.face_encodings(img)[0]
+facescurframe = fc.face_locations(img)
+encode = fc.face_encodings(img,facescurframe)
 print(encode)
+
+cap = cv2.VideoCapture(0)
+while True:
+    SUCESS,img = cap.read()
+    imgs = cv2.resize(img,(0,0),None,0.25,0.25)
+    imgs = cv2.cvtColor(imgs, cv2.COLOR_BGR2RGB)
+
+    facescurframe = fc.face_locations(img)
+    encode2=fc.face_encodings(img,facescurframe)
+    for encodeface,faceloc in zip(encode2,facescurframe):
+        match = fc.compare_faces(encode,encodeface)
+    
+    print (match)
