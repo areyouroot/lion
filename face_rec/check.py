@@ -36,5 +36,7 @@ while True:
     encode2=fc.face_encodings(img,facescurframe)
     for encodeface,faceloc in zip(encode2,facescurframe):
         match = fc.compare_faces(encode,encodeface)
-    
+    #'''Returns a single iterator object, 
+    #    having mapped values from all the containers.'''
+        
     print (match)
