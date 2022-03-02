@@ -13,6 +13,7 @@ import cv2
 import numpy as np
 import face_recognition as fc
 import os
+from django.contrib.auth.decorators import login_required
 
 @gzip.gzip_page
 
@@ -56,6 +57,9 @@ def facerec(request):
                     print("hehehe")
                     return render(request, "lion/facerec.html", {'title': "face",'id':id})
 
+@login_required
+def lion(request):
+    return render(request, "lion/lion.html", {'title': "lion"})
 
 
     #try:
