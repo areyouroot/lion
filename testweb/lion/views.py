@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, StreamingHttpResponse
 from django.views.decorators import gzip
 import cv2
+from django.contrib.auth.models import User
 import threading
 from .models import *
 from django.core.mail import EmailMessage
@@ -14,6 +15,7 @@ import numpy as np
 import face_recognition as fc
 import os
 from django.contrib.auth.decorators import login_required
+from lion.models import profile
 
 @gzip.gzip_page
 
@@ -56,12 +58,13 @@ def facerec(request):
             for encodeface,faceloc in zip(encode2,facescurframe):
                 match = fc.compare_faces(encode,encodeface)
                 if match[0] == True:
-                    c.execute("SELECT username FROM auth_user WHERE id = '%s'" % (id))
+                    user = User.objects.get(id=id)
                     print("user")
-                    print(c.fetchall)
-                    c.execute("SELECT password FROM lion_profile WHERE id = '%s'" % (id))
+                    print(user)
+                    print()
                     print("password")
-                    print(c.fetchall)
+                    pwd=profile.objects.get(id=id)
+                    print(pwd.password)
                     print("hehehe")
                     return render(request, "lion/facerec.html", {'title': "face",'id':id})
 
