@@ -1,5 +1,5 @@
 from tkinter import Frame
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse, StreamingHttpResponse
 from django.views.decorators import gzip
 import cv2
@@ -16,6 +16,7 @@ import face_recognition as fc
 import os
 from django.contrib.auth.decorators import login_required
 from lion.models import profile
+from django.contrib.auth import authenticate,login
 
 @gzip.gzip_page
 
@@ -64,9 +65,12 @@ def facerec(request):
                     print()
                     print("password")
                     pwd=profile.objects.get(user_id=id)
-                    print(pwd.password)
+                    passwd=pwd.password
+                    print(passwd)
                     print("hehehe")
-                    return render(request, "lion/facerec.html", {'title': "face",'id':id})
+                    user = authenticate(request,username=user,password=passwd)
+                    login(request,user,backend='django.contrib.auth.backends.ModelBackend')
+                    return render(request,"lion/lion.html", {'title': "face",'id':id})
 
 @login_required
 def lion(request):
