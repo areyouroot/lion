@@ -4,13 +4,13 @@ https://github.com/leon-ai/docs.getleon.ai
 https://www.google.com/search?q=how+to+get+more+attention+in+github&oq=how+to+get+more+attention+in+github&aqs=chrome..69i57.13305j0j1&sourceid=chrome&ie=UTF-8
 https://www.google.com/search?q=what+is+license+in+github&oq=what+is+license+in+github&aqs=chrome..69i57.11377j0j1&sourceid=chrome&ie=UTF-8
 https://www.youtube.com/results?search_query=how+to+get+stars+in+github
-https://www.youtube.com/watch?v=dyUhGZ6iNTc
-https://www.youtube.com/watch?v=qEJjlB002Tk
-https://www.youtube.com/watch?v=O7JfSF3CJ84
-https://www.youtube.com/watch?v=sz25xxF_AVE
-https://www.youtube.com/watch?v=byHcYRpMgI4
+https://www.youtube.com/watch?v=dyUhGZ6iNTc	#google searcher
+https://www.youtube.com/watch?v=qEJjlB002Tk   	#chat bot
+https://www.youtube.com/watch?v=O7JfSF3CJ84	#voice bots in flutter
+https://www.youtube.com/watch?v=sz25xxF_AVE	#face detections
+https://www.youtube.com/watch?v=byHcYRpMgI4	#sql
 https://github.com/mmirthula02/AI-Personal-Voice-assistant-using-Python
-https://www.youtube.com/watch?v=lKNaklJwNzk
+https://www.youtube.com/watch?v=lKNaklJwNzk   	#chat bot
 https://www.youtube.com/watch?v=vacHkba08XY
 https://www.youtube.com/watch?v=BthLLHcPKIc
 https://www.youtube.com/watch?v=S-oWZYq9Qpk
